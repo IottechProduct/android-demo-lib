@@ -1,0 +1,7 @@
+jdk:
+  -openjdk17
+before_install:
+  -./scripts/prepareJitpackEnvionment.sh
+install:
+  FILE="Dfile=android-demo-lib-release.arr"
+  -mvn install-file $FILE-DgroupId=com.github.IottechProduct -DartifactId=android-demo-lib -Dversion=1.0 -Dpackaging=arr -DgeneratePom=true
